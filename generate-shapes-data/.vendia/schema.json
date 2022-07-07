@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vendia.net/schemas/demos/basic_schema.json",
+  "title": "Sample schema for blockchain demos and testing",
+  "description": "A minimal example, modeling a list of Shapes",
+  "type": "object",
+  "properties": {
+    "Shape": {
+      "description": "A list of shapes",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "The common name of the shape",
+            "type": "string"
+          },
+          "color": {
+            "description": "The color of the shape",
+            "type": "string"
+          },
+          "num_sides": {
+            "description": "How many sides the shape has",
+            "type": "number"
+          }
+        },
+        "required": [
+          "name",
+          "color"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false
+}
