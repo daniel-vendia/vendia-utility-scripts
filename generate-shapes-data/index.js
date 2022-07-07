@@ -59,7 +59,7 @@ const run = async () => {
     }
 
     from(requests)
-        .pipe(mergeAll(process.env.CONCURRENCY))
+        .pipe(mergeAll(parseInt(process.env.CONCURRENCY)))
         .subscribe()
 }
 
